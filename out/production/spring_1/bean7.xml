@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--注入属性，外部bean方式，部门和员工-->
+    <bean id="emp" class="com.wyx.bean.Emp">
+<!--        设置普通属性-->
+        <property name="ename" value="tom"/>
+        <property name="gender"  value="male"/>
+<!--        设置对象型属性-->
+        <property name="dept" ref="dept_ref"/>
+<!--        下面的这种写法需要在Emp类中加getDept方法-->
+<!--        优先级似乎高于上面的ref写法-->
+        <property name="dept.dname" value="tech"/>
+    </bean>
+    <bean id="dept_ref" class="com.wyx.bean.Dept">
+        <property name="dname" value="bigdata"/>
+    </bean>
+</beans>

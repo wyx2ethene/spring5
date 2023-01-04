@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+<!--集合类型属性注入-->
+<!--把集合注入部分单独提取成一部分-->
+    <util:list id="bookList">
+        <value>b1</value>
+        <value>b2</value>
+        <value>b3</value>
+    </util:list>
+
+<!--    注入该list属性-->
+    <bean id="stu" class="com.wyx.bean.Stu">
+        <property name="list" ref="bookList"/>
+    </bean>
+</beans>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--基于xml方式注入属性-->
+<!--    DI:依赖注入，就是注入属性-->
+<!--    第二种注入方式：使用有参构造进行注入-->
+    <bean id="order" class="com.wyx.bean.Order">
+        <constructor-arg name="oname" value="o1"/>
+        <constructor-arg name="address" value="china"/>
+    </bean>
+</beans>

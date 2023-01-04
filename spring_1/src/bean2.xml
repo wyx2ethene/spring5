@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--基于xml方式注入属性-->
+<!--    DI:依赖注入，就是注入属性-->
+<!--    第一种注入方式：set方法进行注入-->
+    <bean id="book" class="com.wyx.bean.Book">
+<!--        使用property完成属性注入-->
+        <property name="bname" value="b1"/>
+        <property name="bauthor" value="tom"/>
+    </bean>
+</beans>

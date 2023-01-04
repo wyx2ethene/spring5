@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--自动装配，根据指定的装配规则(属性名称或者属性类型)，Spring自动将属性值注入-->
+<!--    根据属性名称注入，注入值bean的id值和类属性名称一样，都是dept-->
+<!--    <bean id="emp" class="com.wyx.autowire.Emp" autowire="byName">-->
+
+<!--    </bean>-->
+<!--    <bean id="dept" class="com.wyx.autowire.Dept"/>-->
+</beans>

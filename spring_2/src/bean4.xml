@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    自动装配autowire, byType-->
+<!--    报错：could not autowire, there is more than one bean of 'Dept' type-->
+<!--    因为在bean3.xml中，也写入了一个类型为Dept的bean（bean id='dept'），导致这里根据byType自动定位失败-->
+    <bean id="emp" class="com.wyx.autowire.Emp" autowire="byType">
+    </bean>
+    <bean id="dept1" class="com.wyx.autowire.Dept"/>
+</beans>

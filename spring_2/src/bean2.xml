@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="course" class="com.wyx.bean.Course" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="cname" value="java"/>
+    </bean>
+<!--    配置后置处理器-->
+<!--    该后置处理器会对当前配置文件里所有的bean对象都添加后置处理-->
+    <bean id="myPostProcessor" class="com.wyx.beanPostProcessor.MyPostProcessor"/>
+</beans>

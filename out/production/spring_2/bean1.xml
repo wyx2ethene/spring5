@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    加上scope可以控制bean是单例还是多例-->
+<!--    设置scope是singleton时，加载配置文件就会创建单例对象-->
+<!--    设置scope为prototype时，不是在加载配置文件时创建对象，而是在每次调用getBean方法时创建多实例对象-->
+<!--    scope优先级要高于FactoryBean中的isSingleton方法，当设置为prototype时就算isSingleton为true也一样多例-->
+    <bean id="myBean" class="com.wyx.facBean.MyBean"/>
+</beans>

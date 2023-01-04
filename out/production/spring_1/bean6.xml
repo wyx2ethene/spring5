@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--注入属性，内部bean方式，部门和员工-->
+    <bean id="emp" class="com.wyx.bean.Emp">
+<!--        设置普通属性-->
+        <property name="ename" value="tom"/>
+        <property name="gender"  value="male"/>
+<!--        设置对象型属性-->
+        <property name="dept">
+            <bean class="com.wyx.bean.Dept">
+                <property name="dname" value="it"/>
+            </bean>
+        </property>
+    </bean>
+</beans>
