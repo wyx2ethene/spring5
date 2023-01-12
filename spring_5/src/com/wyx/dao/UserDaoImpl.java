@@ -22,4 +22,10 @@ public class UserDaoImpl implements UserDao {
         Object[] args = {100, "mary"};
         jdbcTemplate.update(sql, args);
     }
+
+    @Override
+    public void insertUser() {
+        String sql = "insert into t_account values(3, 'jack', 200)";
+        jdbcTemplate.update(sql);
+    }
 }

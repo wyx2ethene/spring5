@@ -19,5 +19,11 @@ public class UserService {
 //        int i = 10 / 0;
         //多钱
         userDao.addMoney();
+//        int i = 10 / 0;
+    }
+
+    public void insertUser() {
+        userDao.insertUser();
+//        int i = 10 / 0;
     }
 }

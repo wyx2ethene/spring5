@@ -19,6 +19,7 @@ public class TestDemo {
     public void testTransactionTransferMoney() {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean2.xml");
         UserService userService = context.getBean("userService", UserService.class);
-        userService.transferMoney();
+//        userService.transferMoney();
+        userService.insertUser();
     }
 }
