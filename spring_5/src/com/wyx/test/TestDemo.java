@@ -1,6 +1,6 @@
 package com.wyx.test;
 
-import com.wyx.config.TxConfig;
+
 import com.wyx.service.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
